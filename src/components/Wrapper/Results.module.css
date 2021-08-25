@@ -1,0 +1,6 @@
+.BoxResults {
+  grid-area: results;
+  background: var(--Very-dark-cyan);
+  width: 100%;
+  border-radius: 2rem;
+}

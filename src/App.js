@@ -1,9 +1,12 @@
 import './App.css';
+import Title from './components/Title/Title';
+import Wrapper from './components/Wrapper/Wrapper';
 
 function App() {
   return (
     <div className="App">
-      sa
+      <Title/>
+      <Wrapper/>
     </div>
   );
 }

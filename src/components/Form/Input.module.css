@@ -1,0 +1,61 @@
+.Label,
+.Input {
+  width: 100%;
+  display: block;
+  border-radius: .5rem;
+}
+.Label {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--Very-dark-cyan);
+  margin-bottom: 10px;
+  position: relative;
+}
+.Label > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Input {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  background: var(--Light-grayish-cyan-2);
+  border: 2px solid transparent;
+  text-align: right;
+  cursor: pointer;
+  transition: .3s;
+  color: var(--Very-dark-cyan);
+  font-family: 'Space Mono', monospace;
+}
+.Input:focus,
+.Input:hover {
+  outline: 0;
+  border: 2px solid var(--Very-dark-cyan);
+}
+.Input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+.Input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+}
+.Label::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 1rem;
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  z-index: 1000;
+  background: url('../../images/icon-dollar.svg') no-repeat;
+  background-position: center;
+  background-size: 30%;
+  background-color: var(--Light-grayish-cyan-2);
+}

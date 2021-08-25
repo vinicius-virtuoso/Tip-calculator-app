@@ -1,3 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap');
+:root {
+  --Strong-cyan: #26c0ab;
+  --Very-dark-cyan: #00494d;
+  --Dark-grayish-cyan: #5e7a7d;
+  --Dark-grayish-cyan-2: #7f9c9f;
+  --Light-grayish-cyan: #c5e4e7;
+  --Light-grayish-cyan-2: #f4fafa;
+  --White: #ffffff;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Light-grayish-cyan);
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+}
+.Container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.Error {
+  font-size: 1.2rem;
+  color: orange;
+  display: flex;
+  align-self: center;
+  justify-self: flex-end;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: ErrorAnime .2s ease forwards;
+}
+.Label {
+  display: block;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--Very-dark-cyan);
+  margin-bottom: 10px;
+  position: relative;
+  margin-top: 10px;
+}
+.DivFlex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 10px;
+}
+.BoxLast {
+  margin-top: 230px;
+}
+@keyframes ErrorAnime {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

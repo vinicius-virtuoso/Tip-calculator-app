@@ -1,0 +1,21 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 15rem;
+}
+
+.title {
+  display: block;
+  margin: 10rem;
+  max-width: 120px;
+  word-break: break-all;
+  letter-spacing: .5rem;
+  font-size: 2rem;
+  color: var(--Very-dark-cyan);
+  line-height: 1;
+  text-align: center;
+}
