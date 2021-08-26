@@ -1,5 +1,6 @@
 .Label,
-.Input {
+.Input,
+.InputError {
   width: 100%;
   display: block;
   border-radius: .5rem;
@@ -31,16 +32,32 @@
   color: var(--Very-dark-cyan);
   font-family: 'Space Mono', monospace;
 }
+.InputError {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  background: var(--Light-grayish-cyan-2);
+  border: 2px solid orange;
+  text-align: right;
+  cursor: pointer;
+  transition: .3s;
+  color: var(--Very-dark-cyan);
+  font-family: 'Space Mono', monospace;
+  outline: 0;
+}
 .Input:focus,
 .Input:hover {
   outline: 0;
-  border: 2px solid var(--Very-dark-cyan);
+  border: 2px solid var(--Strong-cyan);
 }
-.Input[type=number]::-webkit-inner-spin-button { 
+.Input[type=number]::-webkit-inner-spin-button,
+.InputError[type=number]::-webkit-inner-spin-button  { 
   -webkit-appearance: none;
   
 }
-.Input[type=number] { 
+.Input[type=number],
+.InputError[type=number] { 
  -moz-appearance: textfield;
  appearance: textfield;
 }
