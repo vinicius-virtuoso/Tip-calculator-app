@@ -1,5 +1,6 @@
 import Bill from "./components/Bill";
 import Resume from "./components/Resume";
+import { ValuesProvider } from "./Context/TheContext";
 import { Content, GlobalStyle, Logo } from "./Styles/Styleds";
 
 function App() {
@@ -7,10 +8,12 @@ function App() {
     <>
       <GlobalStyle/>
         <Logo src="./img/logo.svg" alt="Logo"/>
-        <Content>
-          <Bill/>
-          <Resume/>
-        </Content>
+        <ValuesProvider>
+          <Content>
+            <Bill/>
+            <Resume/>
+          </Content>
+        </ValuesProvider>
     </>
   );
 }

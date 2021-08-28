@@ -1,17 +1,15 @@
 import React from 'react'
 import { Inputs, Label } from '../Styles/Styleds'
 
-const Input = ({label,placeholder}) => {
-
-  const error = false;
+const Input = ({label,placeholder,onChange,value,className,error,onBlur}) => {
 
   return (
     <>
       <Label>
         {label}
-        {error && <span>Can'to be zero</span>}
+        {error ? <span>Can'to be zero</span> : <span></span>  }
       </Label>
-      <Inputs type="number" placeholder={placeholder}/>
+      <Inputs className={className} type="number" placeholder={placeholder} onChange={onChange} value={value} onBlur={onBlur}/>
     </>
   )
 }
