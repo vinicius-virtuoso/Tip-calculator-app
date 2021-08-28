@@ -1,13 +1,17 @@
-import './App.css';
-import Title from './components/Title/Title';
-import Wrapper from './components/Wrapper/Wrapper';
+import Bill from "./components/Bill";
+import Resume from "./components/Resume";
+import { Content, GlobalStyle, Logo } from "./Styles/Styleds";
 
 function App() {
   return (
-    <div className="App">
-      <Title/>
-      <Wrapper/>
-    </div>
+    <>
+      <GlobalStyle/>
+        <Logo src="./img/logo.svg" alt="Logo"/>
+        <Content>
+          <Bill/>
+          <Resume/>
+        </Content>
+    </>
   );
 }
 
