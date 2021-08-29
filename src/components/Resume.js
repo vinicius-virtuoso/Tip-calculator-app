@@ -8,10 +8,10 @@ const Resume = () => {
   function resetAll() {
     setTotal('0.00')
     setTotalPerson('0.00')
-    setBill('0.00')
+    setBill('')
     setTip('')
     setTipCustom(0)
-    setPeople(0)
+    setPeople('')
     setError(false)
     setError2(false)
   }

@@ -11,6 +11,7 @@ export const GlobalStyle  = createGlobalStyle`
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Light-grayish-cyan-2: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
+    --White-dark: #9ebbbd;
   }
   * {
       margin:0;
@@ -148,7 +149,7 @@ export const Inputs = styled.input`
     font-size:24px;
     line-height:1;
     font-weight: 600;
-    color:currentColor;
+    color:var(--White-dark);
   }
   &::-webkit-inner-spin-button { 
     -webkit-appearance: none;

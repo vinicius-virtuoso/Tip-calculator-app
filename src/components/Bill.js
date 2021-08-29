@@ -51,7 +51,7 @@ const Bill = () => {
 
   return (
     <Form onSubmit={(event) => event.preventDefault()} >
-      <Input className={error ? 'error':''} label="Bill" placeholder="0.00" onChange={({target}) => setBill(target.value)} value={bill} error={error} onBlur={validate}/>
+      <Input className={error ? 'error':''} label="Bill" placeholder="0" onChange={({target}) => setBill(target.value)} value={bill} error={error} onBlur={validate}/>
       <ButtonsArea label="Select Tip %"/>
       <Input className={error2 ? 'error':''} label="Number of People" placeholder="0" onChange={({target}) => setPeople(target.value)} value={people} error={error2} onBlur={validate2}/>
     </Form>
