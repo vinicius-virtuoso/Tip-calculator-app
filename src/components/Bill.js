@@ -7,10 +7,6 @@ import Input from './Input'
 const Bill = () => {
   const {setTotal,setTotalPerson,bill,setBill,tipCustom,people,setPeople,setError,error,error2,setError2} = useContext(AllContext)
 
-  function submitForm(event) {
-    event.preventDefault()
-  }
-
   function validate({target}) {
     if(target.value <= 0) {
       setError(true)
@@ -26,6 +22,7 @@ const Bill = () => {
     }
   }
 
+
   useEffect(() => {
     function calcValues() {
       if(bill > 0 && people > 0) {
@@ -37,9 +34,9 @@ const Bill = () => {
     }
     function calcTotalPerson() {
       if(bill > 0 && people > 0) {
-        const soma = bill
-        const oue = (soma / people + (soma * 0.15))
-        setTotalPerson(oue.toFixed(2))
+        const soma = bill / people
+        const allTotal = soma * (1 + (tipCustom / 100))
+        setTotalPerson(allTotal.toFixed(2))
       } else {
         setTotalPerson('0.00')
       }
@@ -50,8 +47,10 @@ const Bill = () => {
   }, [bill, people, setTotal, setTotalPerson, tipCustom]);
 
 
+
+
   return (
-    <Form onSubmit={submitForm} bg>
+    <Form onSubmit={(event) => event.preventDefault()} >
       <Input className={error ? 'error':''} label="Bill" placeholder="0.00" onChange={({target}) => setBill(target.value)} value={bill} error={error} onBlur={validate}/>
       <ButtonsArea label="Select Tip %"/>
       <Input className={error2 ? 'error':''} label="Number of People" placeholder="0" onChange={({target}) => setPeople(target.value)} value={people} error={error2} onBlur={validate2}/>

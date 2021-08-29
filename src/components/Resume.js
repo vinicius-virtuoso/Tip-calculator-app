@@ -3,12 +3,18 @@ import { AllContext } from '../Context/TheContext'
 import { ResumeValue } from '../Styles/Styleds'
 
 const Resume = () => {
-  const {total,totalPerson} = useContext(AllContext)
+  const {total,totalPerson,setTotal,setTotalPerson,setBill,setTip,setTipCustom,setPeople,setError,setError2} = useContext(AllContext)
 
-    console.log(total)
-    console.log(totalPerson)
-
-  
+  function resetAll() {
+    setTotal('0.00')
+    setTotalPerson('0.00')
+    setBill('0.00')
+    setTip('')
+    setTipCustom(0)
+    setPeople(0)
+    setError(false)
+    setError2(false)
+  }
 
   return (
     <ResumeValue>
@@ -16,7 +22,7 @@ const Resume = () => {
       <p>Total</p>
       <span>${total}</span>
       <span>${totalPerson}</span>
-      <button>RESET</button>
+      <button onClick={resetAll}>RESET</button>
     </ResumeValue>
   )
 }

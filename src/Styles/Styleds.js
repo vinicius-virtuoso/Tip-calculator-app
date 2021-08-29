@@ -204,7 +204,7 @@ export const InputsCustom = styled.input`
     padding: 0.5rem 0.5rem;
     font-size: 1.5rem;
     &::placeholder {
-    font-size:1rem;
+    font-size:1.3rem;
     text-align:center;
   }
   }
@@ -230,7 +230,7 @@ export const Button = styled.button`
     color:var(--Very-dark-cyan);
     background: var( --Light-grayish-cyan);
   }
-  &.activeButton {
+  &:focus {
     color:var(--Very-dark-cyan);
     background: var(--Strong-cyan);
   }
@@ -254,7 +254,7 @@ export const ResumeValue = styled.div`
   grid-template-columns:auto 1fr;
   align-items:center;
   justify-content:space-between;
-  padding:2rem;
+  padding:2rem 2rem 4rem 2rem;
   gap:20px;
   text-align:left;
 
@@ -291,10 +291,10 @@ export const ResumeValue = styled.div`
     
   }
   button {
-    margin-top:120px;
+    margin-top:90px;
     grid-area: button;
     border:0;
-    padding:1rem 0;
+    padding:.5rem 0;
     border-radius: .4rem;
     cursor: pointer;
     background:var(--Strong-cyan);
@@ -329,5 +329,14 @@ export const ResumeValue = styled.div`
     span {
       font-size:2rem;
     }
+  }
+`
+export const Attribution = styled.div`
+  font-size: 14px; 
+  text-align: center;
+  margin-top:5px;
+
+  a { 
+    color: hsl(228, 45%, 44%); 
   }
 `

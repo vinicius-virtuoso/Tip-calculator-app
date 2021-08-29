@@ -7,7 +7,7 @@ const Input = ({label,placeholder,onChange,value,className,error,onBlur}) => {
     <>
       <Label>
         {label}
-        {error ? <span>Can'to be zero</span> : <span></span>  }
+        {error ? <span>Can't be zero</span> : <span></span>  }
       </Label>
       <Inputs className={className} type="number" placeholder={placeholder} onChange={onChange} value={value} onBlur={onBlur}/>
     </>
