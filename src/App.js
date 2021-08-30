@@ -1,7 +1,7 @@
 import Bill from "./components/Bill";
 import Resume from "./components/Resume";
 import { ValuesProvider } from "./Context/TheContext";
-import { Attribution, Content, GlobalStyle, Logo } from "./Styles/Styleds";
+import { Accessible, Attribution, Content, GlobalStyle, Logo } from "./Styles/Styleds";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Logo src="./img/logo.svg" alt="Logo"/>
         <ValuesProvider>
           <Content>
+            <Accessible>SPLITTER</Accessible>
             <Bill/>
             <Resume/>
           </Content>

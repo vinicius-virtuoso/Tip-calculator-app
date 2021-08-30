@@ -18,6 +18,7 @@ export const GlobalStyle  = createGlobalStyle`
       padding:0;
       box-sizing:border-box;
       font-family: 'Space Mono', monospace;
+      
   }
   body {
       background: var(--Light-grayish-cyan);
@@ -28,6 +29,7 @@ export const GlobalStyle  = createGlobalStyle`
       justify-content: center;
       flex-direction: column;
       height:100vh;
+      width:100%;
       @media(max-width: 800px) {
         height:100%;
       }
@@ -61,6 +63,13 @@ export const Content = styled.div`
     padding:20px;
     border-radius: 1.5rem 1.5rem 0 0;
   }
+`;
+
+export const Accessible = styled.h1`
+  width:100%;
+  visibility: visible;
+  position:absolute;
+  left: -3000px;
 `;
 
 export const Form = styled.form`
